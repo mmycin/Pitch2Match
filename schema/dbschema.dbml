@@ -1,0 +1,26 @@
+Table users {
+  id integer [pk, increment]
+  firstname varchar
+  lastname varchar
+  email varchar [unique]
+  phone varchar
+  password varchar
+
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table matches {
+  id integer [pk, increment]
+  scanner_id integer
+  scanned_id integer
+  reason varchar
+  scanner_status bool
+  scanned_status bool
+
+  created_at timestamp
+  updated_at timestamp
+}
+
+Ref: users.id < matches.scanner_id
+Ref: users.id < matches.scanned_id
