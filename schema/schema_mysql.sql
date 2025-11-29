@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` integer PRIMARY KEY AUTO_INCREMENT,
   `firstname` varchar(255),
   `lastname` varchar(255),
@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `updated_at` timestamp
 );
 
-CREATE TABLE IF NOT EXISTS `matches` (
+CREATE TABLE `matches` (
   `id` integer PRIMARY KEY AUTO_INCREMENT,
   `scanner_id` integer,
   `scanned_id` integer,
@@ -20,6 +20,19 @@ CREATE TABLE IF NOT EXISTS `matches` (
   `updated_at` timestamp
 );
 
+CREATE TABLE `notification` (
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `type` ENUM ('Scanner', 'Scanned'),
+  `scanner_id` int,
+  `scanned_id` int,
+  `status` bool,
+  `read` bool
+);
+
 ALTER TABLE `matches` ADD FOREIGN KEY (`scanner_id`) REFERENCES `users` (`id`);
 
 ALTER TABLE `matches` ADD FOREIGN KEY (`scanned_id`) REFERENCES `users` (`id`);
+
+ALTER TABLE `notification` ADD FOREIGN KEY (`scanner_id`) REFERENCES `users` (`id`);
+
+ALTER TABLE `notification` ADD FOREIGN KEY (`scanned_id`) REFERENCES `users` (`id`);

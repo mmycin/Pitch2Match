@@ -1,0 +1,69 @@
+@baseUrl = http://localhost:8000/api
+@email = scanner@example.com
+@password = password
+
+### Register Scanner
+POST {{baseUrl}}/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "firstname": "Scanner",
+    "lastname": "User",
+    "email": "{{email}}",
+    "phone": "1111111111",
+    "password": "{{password}}",
+    "password_confirmation": "{{password}}"
+}
+
+### Login Scanner
+# @name login
+POST {{baseUrl}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "{{email}}",
+    "password": "{{password}}"
+}
+
+@token = {{login.response.body.token}}
+
+### Get Scanner Profile
+GET {{baseUrl}}/user
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Scan a User
+# Replace 'scanned_id' with the actual ID of the user you want to scan (e.g., from scanned.http registration)
+POST {{baseUrl}}/matches/scan
+Authorization: Bearer {{token}}
+Content-Type: application/json
+Accept: application/json
+
+{
+    "scanned_id": 2,
+    "reason": "Met at the tech conference"
+}
+
+### List Matches (Scanner View)
+GET {{baseUrl}}/matches
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Get Match by ID
+# Replace '1' with an actual match ID
+GET {{baseUrl}}/matches/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### List Notifications
+GET {{baseUrl}}/notifications
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Mark Notification as Read
+# Replace '1' with an actual notification ID
+POST {{baseUrl}}/notifications/1/read
+Authorization: Bearer {{token}}
+Accept: application/json

@@ -22,5 +22,21 @@ Table matches {
   updated_at timestamp
 }
 
+enum NotificationType {
+  Scanner
+  Scanned
+}
+
+Table notification {
+  id integer [pk, increment]
+  type NotificationType
+  scanner_id int
+  scanned_id int
+  status bool
+  read bool
+}
+
 Ref: users.id < matches.scanner_id
 Ref: users.id < matches.scanned_id
+Ref: users.id < notification.scanner_id
+Ref: users.id < notification.scanned_id

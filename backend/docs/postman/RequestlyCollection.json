@@ -1,0 +1,880 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "id": "b8fe3cb6-cb83-4126-93e6-a2a16f7955a1",
+      "collectionId": "",
+      "name": "Pitch2Match",
+      "description": "",
+      "deleted": false,
+      "type": "collection",
+      "data": {
+        "variables": {},
+        "auth": {
+          "authConfigStore": {},
+          "currentAuthType": "INHERIT"
+        }
+      }
+    },
+    {
+      "id": "808aa61d-a39b-40c7-9e34-12589f2bcf4e",
+      "collectionId": "b8fe3cb6-cb83-4126-93e6-a2a16f7955a1",
+      "name": "scanned-operations",
+      "description": "",
+      "deleted": false,
+      "type": "collection",
+      "data": {
+        "variables": {},
+        "auth": {
+          "authConfigStore": {},
+          "currentAuthType": "INHERIT"
+        }
+      }
+    },
+    {
+      "id": "00b1703e-f0ec-462f-acdd-009651191647",
+      "collectionId": "808aa61d-a39b-40c7-9e34-12589f2bcf4e",
+      "name": "list-matches",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/matches",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764446317204,
+              "key": "Authorization",
+              "value": "Bearer 6|dM5XjPF2Kxdxu3AeSp9oWpobBucqWekNb80g5uEw67b9c729",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": null,
+        "testResults": []
+      }
+    },
+    {
+      "id": "894c04b0-f398-48c8-a67e-76d737ab35d2",
+      "collectionId": "808aa61d-a39b-40c7-9e34-12589f2bcf4e",
+      "name": "match-by-id",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/matches/1",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764446414481,
+              "key": "Authorization",
+              "value": "Bearer 6|dM5XjPF2Kxdxu3AeSp9oWpobBucqWekNb80g5uEw67b9c729",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": null,
+        "testResults": []
+      }
+    },
+    {
+      "id": "3e3f9a76-9bd4-4104-baef-0e84609b70de",
+      "collectionId": "808aa61d-a39b-40c7-9e34-12589f2bcf4e",
+      "name": "scan-accept",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/matches/2/accept",
+          "queryParams": [],
+          "method": "POST",
+          "headers": [
+            {
+              "id": 1764446229720,
+              "key": "Authorization",
+              "value": "Bearer 7|xQFtYln0Vtr8PVfIWrHJysbKOPyiNwZTNKMp1wYC1ff4e775",
+              "isEnabled": true
+            }
+          ],
+          "body": "",
+          "contentType": "application/json",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": {
+          "body": "{\"id\":2,\"scanner_id\":4,\"scanned_id\":6,\"reason\":\"Teha dibe\",\"scanner_status\":true,\"scanned_status\":true,\"created_at\":\"2025-11-29T20:32:53.000000Z\",\"updated_at\":\"2025-11-29T20:33:14.000000Z\"}",
+          "time": 66.72389996051788,
+          "headers": [
+            {
+              "key": "host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 29 Nov 2025 20:33:14 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "status": 200,
+          "statusText": "OK",
+          "redirectedUrl": ""
+        },
+        "testResults": []
+      }
+    },
+    {
+      "id": "6f498902-ac47-4886-8f34-08236cb55bb1",
+      "collectionId": "808aa61d-a39b-40c7-9e34-12589f2bcf4e",
+      "name": "scanned-notification",
+      "description": "",
+      "deleted": false,
+      "type": "collection",
+      "data": {
+        "variables": {},
+        "auth": {
+          "authConfigStore": {},
+          "currentAuthType": "INHERIT"
+        }
+      }
+    },
+    {
+      "id": "5975821a-f060-4f6a-abd9-f12bd279eb07",
+      "collectionId": "6f498902-ac47-4886-8f34-08236cb55bb1",
+      "name": "get-one-scanned-notification",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/notifications",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764448016071,
+              "key": "Authorization",
+              "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": null,
+        "testResults": []
+      }
+    },
+    {
+      "id": "cf753af1-9b2e-47cf-95ac-a04880a207bd",
+      "collectionId": "6f498902-ac47-4886-8f34-08236cb55bb1",
+      "name": "get-scanned-notification",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/notifications",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764448016075,
+              "key": "Authorization",
+              "value": "Bearer 7|xQFtYln0Vtr8PVfIWrHJysbKOPyiNwZTNKMp1wYC1ff4e775",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": {
+          "body": "[{\"id\":2,\"type\":\"Scanner\",\"scanner_id\":4,\"scanned_id\":6,\"status\":true,\"read\":false,\"created_at\":\"2025-11-29T20:33:14.000000Z\",\"updated_at\":\"2025-11-29T20:33:14.000000Z\",\"scanner\":{\"id\":4,\"firstname\":\"Tahcin Ul Karim\",\"lastname\":\"Mycin\",\"email\":\"mycin.mit@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T19:47:19.000000Z\",\"updated_at\":\"2025-11-29T19:47:19.000000Z\"},\"scanned\":{\"id\":6,\"firstname\":\"Asif\",\"lastname\":\"Khan\",\"email\":\"asifkhan@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T20:31:27.000000Z\",\"updated_at\":\"2025-11-29T20:31:27.000000Z\"}},{\"id\":1,\"type\":\"Scanned\",\"scanner_id\":4,\"scanned_id\":6,\"status\":false,\"read\":false,\"created_at\":\"2025-11-29T20:32:53.000000Z\",\"updated_at\":\"2025-11-29T20:32:53.000000Z\",\"scanner\":{\"id\":4,\"firstname\":\"Tahcin Ul Karim\",\"lastname\":\"Mycin\",\"email\":\"mycin.mit@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T19:47:19.000000Z\",\"updated_at\":\"2025-11-29T19:47:19.000000Z\"},\"scanned\":{\"id\":6,\"firstname\":\"Asif\",\"lastname\":\"Khan\",\"email\":\"asifkhan@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T20:31:27.000000Z\",\"updated_at\":\"2025-11-29T20:31:27.000000Z\"}}]",
+          "time": 73.31419998407364,
+          "headers": [
+            {
+              "key": "host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 29 Nov 2025 20:34:17 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "status": 200,
+          "statusText": "OK",
+          "redirectedUrl": ""
+        },
+        "testResults": []
+      }
+    },
+    {
+      "id": "92650075-2d2d-45e0-8cb0-13e94d7983af",
+      "collectionId": "6f498902-ac47-4886-8f34-08236cb55bb1",
+      "name": "update-scanned-notification",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/notifications/2/read",
+          "queryParams": [],
+          "method": "POST",
+          "headers": [
+            {
+              "id": 1764448016078,
+              "key": "Authorization",
+              "value": "Bearer 7|xQFtYln0Vtr8PVfIWrHJysbKOPyiNwZTNKMp1wYC1ff4e775",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": {
+          "body": "{\"id\":2,\"type\":\"Scanner\",\"scanner_id\":4,\"scanned_id\":6,\"status\":true,\"read\":true,\"created_at\":\"2025-11-29T20:33:14.000000Z\",\"updated_at\":\"2025-11-29T20:35:02.000000Z\"}",
+          "time": 59.59610003232956,
+          "headers": [
+            {
+              "key": "host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 29 Nov 2025 20:35:02 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "status": 200,
+          "statusText": "OK",
+          "redirectedUrl": ""
+        },
+        "testResults": []
+      }
+    },
+    {
+      "id": "e2e4e382-f120-4811-b22d-73bb2aedc741",
+      "collectionId": "b8fe3cb6-cb83-4126-93e6-a2a16f7955a1",
+      "name": "scanner-opeations",
+      "description": "",
+      "deleted": false,
+      "type": "collection",
+      "data": {
+        "variables": {},
+        "auth": {
+          "authConfigStore": {},
+          "currentAuthType": "INHERIT"
+        }
+      }
+    },
+    {
+      "id": "d903acdf-9598-4f99-afe0-52c2747bae29",
+      "collectionId": "e2e4e382-f120-4811-b22d-73bb2aedc741",
+      "name": "list-matches",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/matches",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764446317204,
+              "key": "Authorization",
+              "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": null,
+        "testResults": []
+      }
+    },
+    {
+      "id": "b138d8b0-8e3c-4449-9778-07f4ef9edce1",
+      "collectionId": "e2e4e382-f120-4811-b22d-73bb2aedc741",
+      "name": "match-by-id",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/matches/1",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764446414481,
+              "key": "Authorization",
+              "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": null,
+        "testResults": []
+      }
+    },
+    {
+      "id": "c551937b-3d06-4664-9ea5-fd9f6659fa18",
+      "collectionId": "e2e4e382-f120-4811-b22d-73bb2aedc741",
+      "name": "scan-user",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/matches/scan",
+          "queryParams": [],
+          "method": "POST",
+          "headers": [
+            {
+              "id": 1764446090657,
+              "key": "Authorization",
+              "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+              "isEnabled": true
+            }
+          ],
+          "body": "{\n  \"scanned_id\": 6,\n  \"reason\": \"Teha dibe\"\n}",
+          "bodyContainer": {
+            "text": "{\n  \"scanned_id\": 6,\n  \"reason\": \"Teha dibe\"\n}",
+            "form": [],
+            "multipartForm": []
+          },
+          "contentType": "application/json",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": {
+          "body": "{\"scanner_id\":4,\"scanned_id\":6,\"reason\":\"Teha dibe\",\"scanner_status\":true,\"scanned_status\":false,\"updated_at\":\"2025-11-29T20:32:53.000000Z\",\"created_at\":\"2025-11-29T20:32:53.000000Z\",\"id\":2}",
+          "time": 83.55930000543594,
+          "headers": [
+            {
+              "key": "host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 29 Nov 2025 20:32:53 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "status": 201,
+          "statusText": "Created",
+          "redirectedUrl": ""
+        },
+        "testResults": []
+      }
+    },
+    {
+      "id": "af4328d3-f636-46d2-b1bf-ee8ff2145b3b",
+      "collectionId": "e2e4e382-f120-4811-b22d-73bb2aedc741",
+      "name": "scanner-notification",
+      "description": "",
+      "deleted": false,
+      "type": "collection",
+      "data": {
+        "variables": {},
+        "auth": {
+          "authConfigStore": {},
+          "currentAuthType": "INHERIT"
+        }
+      }
+    },
+    {
+      "id": "7e651ac0-4895-4643-89a1-ddffa3dd7071",
+      "collectionId": "af4328d3-f636-46d2-b1bf-ee8ff2145b3b",
+      "name": "get-one-scanner-notification",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/notification",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764448016071,
+              "key": "Authorization",
+              "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": null,
+        "testResults": []
+      }
+    },
+    {
+      "id": "e4726bfc-ecfa-45fc-a297-8419d61dde76",
+      "collectionId": "af4328d3-f636-46d2-b1bf-ee8ff2145b3b",
+      "name": "get-scanner-notification",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/notifications",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764448016071,
+              "key": "Authorization",
+              "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": {
+          "body": "[{\"id\":2,\"type\":\"Scanner\",\"scanner_id\":4,\"scanned_id\":6,\"status\":true,\"read\":true,\"created_at\":\"2025-11-29T20:33:14.000000Z\",\"updated_at\":\"2025-11-29T20:35:02.000000Z\",\"scanner\":{\"id\":4,\"firstname\":\"Tahcin Ul Karim\",\"lastname\":\"Mycin\",\"email\":\"mycin.mit@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T19:47:19.000000Z\",\"updated_at\":\"2025-11-29T19:47:19.000000Z\"},\"scanned\":{\"id\":6,\"firstname\":\"Asif\",\"lastname\":\"Khan\",\"email\":\"asifkhan@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T20:31:27.000000Z\",\"updated_at\":\"2025-11-29T20:31:27.000000Z\"}},{\"id\":1,\"type\":\"Scanned\",\"scanner_id\":4,\"scanned_id\":6,\"status\":false,\"read\":false,\"created_at\":\"2025-11-29T20:32:53.000000Z\",\"updated_at\":\"2025-11-29T20:32:53.000000Z\",\"scanner\":{\"id\":4,\"firstname\":\"Tahcin Ul Karim\",\"lastname\":\"Mycin\",\"email\":\"mycin.mit@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T19:47:19.000000Z\",\"updated_at\":\"2025-11-29T19:47:19.000000Z\"},\"scanned\":{\"id\":6,\"firstname\":\"Asif\",\"lastname\":\"Khan\",\"email\":\"asifkhan@gmail.com\",\"phone\":\"0176188707\",\"email_verified_at\":null,\"created_at\":\"2025-11-29T20:31:27.000000Z\",\"updated_at\":\"2025-11-29T20:31:27.000000Z\"}}]",
+          "time": 69.2597000002861,
+          "headers": [
+            {
+              "key": "host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 29 Nov 2025 20:35:12 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "status": 200,
+          "statusText": "OK",
+          "redirectedUrl": ""
+        },
+        "testResults": []
+      }
+    },
+    {
+      "id": "0ed69f04-31fb-460e-b8b4-ef10bc64ffbf",
+      "collectionId": "b8fe3cb6-cb83-4126-93e6-a2a16f7955a1",
+      "name": "user-auth",
+      "description": "",
+      "deleted": false,
+      "type": "collection",
+      "data": {
+        "variables": {},
+        "auth": {
+          "authConfigStore": {},
+          "currentAuthType": "INHERIT"
+        }
+      }
+    },
+    {
+      "id": "224a9159-5174-44d2-a68f-f813199fcc94",
+      "collectionId": "0ed69f04-31fb-460e-b8b4-ef10bc64ffbf",
+      "name": "get-user",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/user",
+          "queryParams": [],
+          "method": "GET",
+          "headers": [
+            {
+              "id": 1764445793143,
+              "key": "Authorization",
+              "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+              "isEnabled": true
+            }
+          ],
+          "body": null,
+          "contentType": "text/plain",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": null,
+        "testResults": []
+      }
+    },
+    {
+      "id": "9a2d355d-b6dd-476b-bfc1-51a2ac190cdb",
+      "collectionId": "0ed69f04-31fb-460e-b8b4-ef10bc64ffbf",
+      "name": "user-login",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/login",
+          "queryParams": [],
+          "method": "POST",
+          "headers": [],
+          "body": "{\n  \"email\": \"asifkhan@gmail.com\",\n  \"password\": \"12345678\"\n}",
+          "bodyContainer": {
+            "text": "{\n  \"email\": \"asifkhan@gmail.com\",\n  \"password\": \"12345678\"\n}",
+            "form": [],
+            "multipartForm": []
+          },
+          "contentType": "application/json",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": {
+          "body": "{\"message\":\"success\",\"token\":\"7|xQFtYln0Vtr8PVfIWrHJysbKOPyiNwZTNKMp1wYC1ff4e775\"}",
+          "time": 344.71820002794266,
+          "headers": [
+            {
+              "key": "host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 29 Nov 2025 20:31:35 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "status": 200,
+          "statusText": "OK",
+          "redirectedUrl": ""
+        },
+        "testResults": []
+      }
+    },
+    {
+      "id": "0764cac3-f59e-448f-9315-3a07af12588e",
+      "collectionId": "0ed69f04-31fb-460e-b8b4-ef10bc64ffbf",
+      "name": "user-registration",
+      "deleted": false,
+      "type": "api",
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "http://localhost:8000/api/register",
+          "queryParams": [],
+          "method": "POST",
+          "headers": [],
+          "body": "{\n  \"firstname\": \"Asif\",\n  \"lastname\": \"Khan\",\n  \"email\": \"asifkhan@gmail.com\",\n  \"phone\": \"0176188707\",\n  \"password\": \"12345678\",\n  \"password_confirmation\": \"12345678\"\n}",
+          "bodyContainer": {
+            "text": "{\n  \"firstname\": \"Asif\",\n  \"lastname\": \"Khan\",\n  \"email\": \"asifkhan@gmail.com\",\n  \"phone\": \"0176188707\",\n  \"password\": \"12345678\",\n  \"password_confirmation\": \"12345678\"\n}",
+            "form": [],
+            "multipartForm": []
+          },
+          "contentType": "application/json",
+          "pathVariables": []
+        },
+        "scripts": {
+          "preRequest": "",
+          "postResponse": ""
+        },
+        "auth": {
+          "currentAuthType": "INHERIT",
+          "authConfigStore": {}
+        },
+        "response": {
+          "body": "{\"message\":\"success\",\"user\":{\"id\":6,\"firstname\":\"Asif\",\"lastname\":\"Khan\",\"email\":\"asifkhan@gmail.com\",\"phone\":\"0176188707\",\"created_at\":\"2025-11-29T20:31:27.000000Z\",\"updated_at\":\"2025-11-29T20:31:27.000000Z\"}}",
+          "time": 424.7900000214577,
+          "headers": [
+            {
+              "key": "host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 29 Nov 2025 20:31:27 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "status": 201,
+          "statusText": "Created",
+          "redirectedUrl": ""
+        },
+        "testResults": []
+      }
+    }
+  ]
+}

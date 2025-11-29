@@ -1,0 +1,63 @@
+@baseUrl = http://localhost:8000/api
+@email = scanned@example.com
+@password = password
+
+### Register Scanned User
+POST {{baseUrl}}/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "firstname": "Scanned",
+    "lastname": "Person",
+    "email": "{{email}}",
+    "phone": "2222222222",
+    "password": "{{password}}",
+    "password_confirmation": "{{password}}"
+}
+
+### Login Scanned User
+# @name login
+POST {{baseUrl}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "{{email}}",
+    "password": "{{password}}"
+}
+
+@token = {{login.response.body.token}}
+
+### Get Scanned Profile
+GET {{baseUrl}}/user
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### List Matches (Scanned View)
+GET {{baseUrl}}/matches
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Get Match by ID
+# Replace '1' with an actual match ID
+GET {{baseUrl}}/matches/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Accept Match
+# Replace '1' with an actual match ID
+POST {{baseUrl}}/matches/1/accept
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### List Notifications
+GET {{baseUrl}}/notifications
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Mark Notification as Read
+# Replace '1' with an actual notification ID
+POST {{baseUrl}}/notifications/1/read
+Authorization: Bearer {{token}}
+Accept: application/json

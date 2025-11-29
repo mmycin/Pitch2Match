@@ -1,0 +1,456 @@
+{
+  "info": {
+    "_postman_id": "2a6eff66-3311-457d-af93-576b7b91e371",
+    "name": "Pitch2Match",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "1a2959d6-deb0-4bbe-a647-3d3eae60e7bc",
+      "name": "scanned-operations",
+      "item": [
+        {
+          "id": "e069c2be-1551-4d80-93fc-d84622901ac1",
+          "name": "list-matches",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer 6|dM5XjPF2Kxdxu3AeSp9oWpobBucqWekNb80g5uEw67b9c729",
+                "type": "text",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/matches",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "matches"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "1753e418-985d-4922-9235-9a3821bc33d7",
+          "name": "match-by-id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer 6|dM5XjPF2Kxdxu3AeSp9oWpobBucqWekNb80g5uEw67b9c729",
+                "type": "text",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/matches/1",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "matches",
+                "1"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "ea884ce4-0c44-4583-955d-3d52cecdc987",
+          "name": "scan-accept",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer 7|xQFtYln0Vtr8PVfIWrHJysbKOPyiNwZTNKMp1wYC1ff4e775",
+                "type": "text",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/matches/2/accept",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "matches",
+                "2",
+                "accept"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "de37d6a7-8f01-4a0b-8444-9228093c47a1",
+          "name": "scanned-notification",
+          "item": [
+            {
+              "id": "c1e086bc-6550-477f-bf30-b38d01cb5664",
+              "name": "get-one-scanned-notification",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+                    "type": "text",
+                    "disabled": false
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/notifications",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [
+                    "api",
+                    "notifications"
+                  ],
+                  "protocol": "http"
+                }
+              },
+              "response": [],
+              "event": []
+            },
+            {
+              "id": "f84e8a1a-1607-459b-a23d-fa409b8a4f45",
+              "name": "get-scanned-notification",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer 7|xQFtYln0Vtr8PVfIWrHJysbKOPyiNwZTNKMp1wYC1ff4e775",
+                    "type": "text",
+                    "disabled": false
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/notifications",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [
+                    "api",
+                    "notifications"
+                  ],
+                  "protocol": "http"
+                }
+              },
+              "response": [],
+              "event": []
+            },
+            {
+              "id": "bec11715-d762-4be3-8c2d-a2b70ac44b64",
+              "name": "update-scanned-notification",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer 7|xQFtYln0Vtr8PVfIWrHJysbKOPyiNwZTNKMp1wYC1ff4e775",
+                    "type": "text",
+                    "disabled": false
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/notifications/2/read",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [
+                    "api",
+                    "notifications",
+                    "2",
+                    "read"
+                  ],
+                  "protocol": "http"
+                }
+              },
+              "response": [],
+              "event": []
+            }
+          ],
+          "variable": []
+        }
+      ],
+      "variable": []
+    },
+    {
+      "id": "0e760e8d-2e9a-404c-9424-a0358e9bd7ec",
+      "name": "scanner-opeations",
+      "item": [
+        {
+          "id": "9f499eef-bdf8-4608-b39d-62bd7b8a20bd",
+          "name": "list-matches",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+                "type": "text",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/matches",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "matches"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "4ca2deb6-6e4f-4cc1-b3f3-0dd944d67abf",
+          "name": "match-by-id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+                "type": "text",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/matches/1",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "matches",
+                "1"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "58636a3a-7ca6-433c-b15e-98cf52d46be0",
+          "name": "scan-user",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+                "type": "text",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"scanned_id\": 6,\n  \"reason\": \"Teha dibe\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/matches/scan",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "matches",
+                "scan"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "6490eb4d-460d-4108-8e4c-0b19d95b738b",
+          "name": "scanner-notification",
+          "item": [
+            {
+              "id": "320604b5-9c7a-4127-9289-c95980c63c65",
+              "name": "get-one-scanner-notification",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+                    "type": "text",
+                    "disabled": false
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/notification",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [
+                    "api",
+                    "notification"
+                  ],
+                  "protocol": "http"
+                }
+              },
+              "response": [],
+              "event": []
+            },
+            {
+              "id": "08750c76-9d7d-40ab-bcbb-4d40a4d7a74f",
+              "name": "get-scanner-notification",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+                    "type": "text",
+                    "disabled": false
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/notifications",
+                  "host": [
+                    "localhost"
+                  ],
+                  "path": [
+                    "api",
+                    "notifications"
+                  ],
+                  "protocol": "http"
+                }
+              },
+              "response": [],
+              "event": []
+            }
+          ],
+          "variable": []
+        }
+      ],
+      "variable": []
+    },
+    {
+      "id": "ff5e10d5-91ee-4598-980a-1889c75fc021",
+      "name": "user-auth",
+      "item": [
+        {
+          "id": "6ac023a5-8cb4-4b5f-b746-e84e743d0718",
+          "name": "get-user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer 4|w4vbLOOXUD8eAc192ACtrWGjjQ1DbOS5vVgwgp7Vdcf7196d",
+                "type": "text",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/user",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "user"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "f281c28f-4827-4ee7-9c3d-21e5c0892d4e",
+          "name": "user-login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"asifkhan@gmail.com\",\n  \"password\": \"12345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/login",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "7d2e10bb-d220-4ce0-9260-34e4f8a55cb5",
+          "name": "user-registration",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstname\": \"Asif\",\n  \"lastname\": \"Khan\",\n  \"email\": \"asifkhan@gmail.com\",\n  \"phone\": \"0176188707\",\n  \"password\": \"12345678\",\n  \"password_confirmation\": \"12345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/register",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "register"
+              ],
+              "protocol": "http"
+            }
+          },
+          "response": [],
+          "event": []
+        }
+      ],
+      "variable": []
+    }
+  ]
+}
