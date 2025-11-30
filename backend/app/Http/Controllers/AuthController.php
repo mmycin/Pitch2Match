@@ -84,4 +84,22 @@ class AuthController extends Controller
 
         return response()->json(['message' => 'Logged out successfully']);
     }
+
+    /**
+     * Get public user profile by ID.
+     * 
+     * @unauthenticated
+     */
+    public function show($id)
+    {
+        $user = \App\Models\User::findOrFail($id);
+        
+        return response()->json([
+            'id' => $user->id,
+            'firstname' => $user->firstname,
+            'lastname' => $user->lastname,
+            'email' => $user->email,
+            'phone' => $user->phone,
+        ]);
+    }
 }

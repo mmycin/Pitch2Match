@@ -16,7 +16,7 @@ class MatchService
             'scanned_id' => $scannedId,
             'reason' => $reason,
             'scanner_status' => true,
-            'scanned_status' => false,
+            'scanned_status' => true, // Auto-accept match
         ]);
 
         // Create notification for scanned user
@@ -24,7 +24,7 @@ class MatchService
             'type' => 'Scanned',
             'scanner_id' => $scanner->id,
             'scanned_id' => $scannedId,
-            'status' => false,
+            'status' => true, // Auto-accepted
             'read' => false,
         ]);
 
